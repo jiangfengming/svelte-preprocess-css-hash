@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess-css-hash",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Passing hashed css class to child component",
   "main": "index.js",
   "scripts": {
