@@ -9,15 +9,15 @@ module.exports = () => ({
     }
 
     style = style[0];
-    const clsArr = [];
+    const clsSet = new Set();
     let match;
     const regex = /:global\(\.(--[\w-]+)/g;
 
     while ((match = regex.exec(style)) !== null) {
-      clsArr.push(match[1]);
+      clsSet.add(match[1]);
     }
 
-    if (!clsArr.length) {
+    if (!clsSet.size) {
       return { code: content };
     }
 
@@ -27,7 +27,7 @@ module.exports = () => ({
       .replace(/\+/g, '-')
       .replace(/=/g, '');
 
-    for (const cls of clsArr) {
+    for (const cls of clsSet) {
       content = content.replace(new RegExp(cls, 'g'), cls + '-' + hash);
     }
 
