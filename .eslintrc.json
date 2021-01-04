@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "enough"
+  ],
+
+  "env": {
+    "node": true
+  },
+
+  "plugins": [
+    "ext"
+  ],
+
+  "rules": {
+    "ext/lines-between-object-properties": ["error", "always", { "exceptBetweenSingleLines": true }]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "svelte-preprocess-css-hash",
+  "version": "0.0.0",
+  "description": "Passing hashed css class to child component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiangfengming/svelte-preprocess-css-hash.git"
+  },
+  "keywords": [
+    "svelte",
+    "css"
+  ],
+  "author": "Jiang Fengming",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jiangfengming/svelte-preprocess-css-hash/issues"
+  },
+  "homepage": "https://github.com/jiangfengming/svelte-preprocess-css-hash#readme",
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-config-enough": "^0.7.0",
+    "eslint-plugin-ext": "^0.1.0"
+  },
+  "dependencies": {
+    "metrohash": "^2.6.0"
+  }
+}
