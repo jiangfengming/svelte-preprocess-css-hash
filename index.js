@@ -14,7 +14,6 @@ module.exports = () => ({
     const regex = /:global\(\.(--[\w-]+)/g;
 
     while ((match = regex.exec(style)) !== null) {
-      console.log(match);
       clsArr.push(match[1]);
     }
 
