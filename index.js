@@ -22,7 +22,7 @@ module.exports = () => ({
       return { code: content };
     }
 
-    const hash = Buffer.from(metrohash64(content), 'hex')
+    const hash = Buffer.from(metrohash64(style), 'hex')
       .toString('base64')
       .replace(/\//g, '_')
       .replace(/\+/g, '-')
