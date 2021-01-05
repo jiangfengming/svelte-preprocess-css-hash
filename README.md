@@ -20,6 +20,7 @@ output:
 <style>
 :global(.--child-cls-o_ymK9rQg8Q) {
   color: red;
+  --primary-color: blue;
 }
 </style>
 
