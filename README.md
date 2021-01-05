@@ -1,5 +1,5 @@
 # svelte-preprocess-css-hash
-Passing hashed css class to child component. It is used to avoid class name conflicts.
+Passing hashed css class name to child component. It is used to avoid class name conflicts.
 
 ## Example
 
