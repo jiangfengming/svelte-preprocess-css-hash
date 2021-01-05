@@ -26,6 +26,11 @@ output:
 ```
 
 Class name with `:global(.--*)` format will be hashed.
+It's simply a find-replace operation. So you could pass the class name as other prop name. For example:
+
+```html
+<ChildComponent wrapperCls="--wrapper" contentCls="--content" />
+```
 
 And in child component, you can receive the class name as a normal prop:
 
