@@ -8,6 +8,7 @@ input:
 <style>
 :global(.--child-cls) {
   color: red;
+  --primary-color: blue;
 }
 </style>
 
