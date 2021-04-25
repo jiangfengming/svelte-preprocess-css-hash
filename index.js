@@ -1,4 +1,4 @@
-const { metrohash64 } = require('metrohash');
+const { fingerprint32 } = require('farmhash');
 
 module.exports = () => ({
   markup({ content }) {
@@ -21,7 +21,7 @@ module.exports = () => ({
       return { code: content };
     }
 
-    const hash = Buffer.from(metrohash64(style), 'hex')
+    const hash = Buffer.from(fingerprint32(style).toString(16), 'hex')
       .toString('base64')
       .replace(/\//g, '_')
       .replace(/\+/g, '-')

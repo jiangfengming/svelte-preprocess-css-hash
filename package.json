@@ -21,11 +21,11 @@
   },
   "homepage": "https://github.com/jiangfengming/svelte-preprocess-css-hash#readme",
   "devDependencies": {
-    "eslint": "^7.17.0",
+    "eslint": "^7.25.0",
     "eslint-config-enough": "^0.7.0",
     "eslint-plugin-ext": "^0.1.0"
   },
   "dependencies": {
-    "metrohash": "^2.6.0"
+    "farmhash": "^3.2.1"
   }
 }
