@@ -6,10 +6,13 @@ Passing hashed css class name to child component. It is used to avoid class name
 input:
 ```html
 <style>
-:global(.--child-cls) {
-  color: red;
-  --primary-color: blue;
-}
+  :global(.--child-cls) {
+    color: red;
+  }
+
+  :global(.--child-cls:hover .nested-cls) {
+    color: green;
+  }
 </style>
 
 <ChildComponent class="--child-cls" />
@@ -18,13 +21,16 @@ input:
 output:
 ```html
 <style>
-:global(.--child-cls-o_ymK9rQg8Q) {
-  color: red;
-  --primary-color: blue;
-}
+  :global(.--child-cls-pXX_fA) {
+    color: red;
+  }
+
+  :global(.--child-cls-pXX_fA:hover .nested-cls) {
+    color: green;
+  }
 </style>
 
-<ChildComponent class="--child-cls-o_ymK9rQg8Q" />
+<ChildComponent class="--child-cls-pXX_fA" />
 ```
 
 Class name with `:global(.--*)` format will be hashed.
