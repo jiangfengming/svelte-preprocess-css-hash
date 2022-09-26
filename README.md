@@ -10,8 +10,12 @@ input:
     color: red;
   }
 
-  :global(.--child-cls:hover .nested-cls) {
+  :global(.--child-cls:hover .--nested-cls) {
     color: green;
+  }
+
+  :global(html.night .--child-cls .--nested-cls) {
+    color: blue;
   }
 </style>
 
@@ -25,16 +29,21 @@ output:
     color: red;
   }
 
-  :global(.--child-cls-pXX_fA:hover .nested-cls) {
+  /* only the first class name that is prefixed with '--' will be hashed */
+  :global(.--child-cls-pXX_fA:hover .--nested-cls) {
     color: green;
+  }
+
+  :global(html.night .--child-cls-pXX_fA .--nested-cls) {
+    color: blue;
   }
 </style>
 
 <ChildComponent class="--child-cls-pXX_fA" />
 ```
 
-Class name with `:global(.--*)` format will be hashed.
-It's simply a find-replace operation. So you could pass the class name as other prop name. For example:
+The first class name that is prefixed with `--`  within `:global() ` will be hashed.
+It's simply a find-replace operation. So you could pass the class names to other attributes. For example:
 
 ```html
 <ChildComponent wrapperCls="--wrapper" contentCls="--content" />

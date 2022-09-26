@@ -11,7 +11,7 @@ module.exports = () => ({
     style = style[0];
     const clsSet = new Set();
     let match;
-    const regex = /:global\(\.(--[\w-]+)/g;
+    const regex = /:global\([^)]*?\.(--[\w-]+)/g;
 
     while ((match = regex.exec(style)) !== null) {
       clsSet.add(match[1]);
