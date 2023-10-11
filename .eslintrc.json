@@ -1,9 +1,0 @@
-{
-  "extends": [
-    "unambiguous"
-  ],
-
-  "env": {
-    "node": true
-  }
-}

@@ -1,7 +1,6 @@
+const preprocessor = require('./index.js')
 
-const preprocessor = require('./index.js');
-
-let content;
+let content
 
 content = `
 <style>
@@ -11,9 +10,9 @@ content = `
 </style>
 
 <ChildComponent class="--child-cls" />
-`;
+`
 
-console.log(preprocessor().markup({ content }).code);
+console.log(preprocessor().markup({ content }).code)
 
 content = `
 <style>
@@ -23,9 +22,9 @@ content = `
 </style>
 
 <ChildComponent class="--child-cls" />
-`;
+`
 
-console.log(preprocessor().markup({ content }).code);
+console.log(preprocessor().markup({ content }).code)
 
 content = `
 <style>
@@ -35,6 +34,6 @@ content = `
 </style>
 
 <ChildComponent class="--child-cls" />
-`;
+`
 
-console.log(preprocessor().markup({ content }).code);
+console.log(preprocessor().markup({ content }).code)
