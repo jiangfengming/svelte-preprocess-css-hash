@@ -1,7 +1,7 @@
 {
   "name": "svelte-preprocess-css-hash",
   "type": "module",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "Passing hashed css class name to child component",
   "author": "Jiang Fengming",
   "license": "MIT",
