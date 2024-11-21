@@ -2,11 +2,11 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "NodeNext",
+    "strict": true,
     "declaration": true,
     "outDir": "./dist",
-    "strict": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
   "include": ["src/**/*"]
 }
