@@ -6,47 +6,47 @@ Passing hashed css class name to child component. It is used to avoid class name
 input:
 ```html
 <style>
-  :global(.--child-cls) {
+  :global(.-child-cls) {
     color: red;
   }
 
-  :global(.--child-cls:hover .--nested-cls) {
+  :global(.-child-cls:hover .-nested-cls) {
     color: green;
   }
 
-  :global(html.night .--child-cls .--nested-cls) {
+  :global(html.night .-child-cls .-nested-cls) {
     color: blue;
   }
 </style>
 
-<ChildComponent class="--child-cls" />
+<ChildComponent class="-child-cls" />
 ```
 
 output:
 ```html
 <style>
-  :global(.--child-cls-pXX_fA) {
+  :global(.-child-cls-pXX_fA) {
     color: red;
   }
 
-  /* only the first class name that is prefixed with '--' will be hashed */
-  :global(.--child-cls-pXX_fA:hover .--nested-cls) {
+  /* only the first class name that is prefixed with '-' will be hashed */
+  :global(.-child-cls-pXX_fA:hover .-nested-cls) {
     color: green;
   }
 
-  :global(html.night .--child-cls-pXX_fA .--nested-cls) {
+  :global(html.night .-child-cls-pXX_fA .-nested-cls) {
     color: blue;
   }
 </style>
 
-<ChildComponent class="--child-cls-pXX_fA" />
+<ChildComponent class="-child-cls-pXX_fA" />
 ```
 
-The first class name that is prefixed with `--`  within `:global() ` will be hashed.
+The first class name that is prefixed with `-`  within `:global() ` will be hashed.
 It's simply a find-replace operation. So you could pass the class names to other attributes. For example:
 
 ```html
-<ChildComponent wrapperCls="--wrapper" contentCls="--content" />
+<ChildComponent wrapperCls="-wrapper" contentCls="-content" />
 ```
 
 And in child component, you can receive the class name as a normal prop:
@@ -68,13 +68,13 @@ ChildComponent.svelte:
 Create a `svelte.config.js` file in your project root folder with following contents:
 
 ```js
-const cssHash = require('svelte-preprocess-css-hash');
+const cssHash = require('svelte-preprocess-css-hash')
 
 module.exports = {
   preprocess: [
     cssHash()
   ]
-};
+}
 ```
 
 ## License

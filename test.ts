@@ -1,39 +1,40 @@
-const preprocessor = require('./index.js')
+/* eslint-disable no-console */
+import preprocessor from './src'
 
 let content
 
 content = `
 <style>
-  :global(.--child-cls) {
+  :global(.-child-cls) {
     color: red;
   }
 </style>
 
-<ChildComponent class="--child-cls" />
+<ChildComponent class="-child-cls" />
 `
 
 console.log(preprocessor().markup({ content }).code)
 
 content = `
 <style>
-  :global(.--child-cls:hover .--nested-cls) {
+  :global(.-child-cls:hover .-nested-cls) {
     color: green;
   }
 </style>
 
-<ChildComponent class="--child-cls" />
+<ChildComponent class="-child-cls" />
 `
 
 console.log(preprocessor().markup({ content }).code)
 
 content = `
 <style>
-  :global(html.night .--child-cls:hover .--nested-cls) {
+  :global(html.night .-child-cls:hover .-nested-cls) {
     color: green;
   }
 </style>
 
-<ChildComponent class="--child-cls" />
+<ChildComponent class="-child-cls" />
 `
 
 console.log(preprocessor().markup({ content }).code)
